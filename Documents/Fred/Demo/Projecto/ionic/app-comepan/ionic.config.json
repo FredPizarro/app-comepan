@@ -1,0 +1,7 @@
+{
+  "name": "app-comepan",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
