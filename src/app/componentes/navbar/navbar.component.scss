@@ -1,0 +1,89 @@
+/* Estilos Generales */
+body, html {
+    margin: 0;
+    padding: 0;
+    scroll-padding-top: 60px;
+  }
+  
+  /* Estilos de la Navbar */
+  .navbar {
+    display: flex;
+    justify-content: space-between; /* Cambiado para acomodar el botón */
+    align-items: center;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: #333;
+    z-index: 1000;
+    padding: 10px 0;
+  }
+  
+  .nav-menu {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .nav-link {
+    color: white;
+    text-decoration: none;
+    padding: 10px 15px;
+  }
+  
+  .nav-link:hover, .nav-toggle:focus {
+    background-color: #555;
+    border-radius: 5px;
+  }
+  
+  .nav-toggle {
+    display: none;
+    background-color: #333;
+    border: none;
+    color: white;
+    padding: 10px 15px;
+    cursor: pointer;
+  }
+  
+  .hamburger {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background: white;
+    position: relative;
+  }
+  
+  .hamburger::before, .hamburger::after {
+    content: '';
+    background: white;
+    width: 25px;
+    height: 3px;
+    display: block;
+    position: absolute;
+    transition: all 0.3s;
+  }
+  
+  .hamburger::before { top: -8px; }
+  .hamburger::after { bottom: -8px; }
+  
+  /* Responsividad */
+  @media (max-width: 768px) {
+    .nav-menu {
+      display: none;
+      flex-direction: column;
+      width: 100%;
+      position: absolute;
+      top: 55px;
+      left: 0;
+      background-color: #333;
+    }
+  
+    .nav-menu.active {
+      display: flex;
+    }
+  
+    .nav-toggle {
+      display: block;
+    }
+  }
+  
