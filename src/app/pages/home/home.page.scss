@@ -1,21 +1,22 @@
 .home {
     overflow-y: auto;
+}
 
-    app-navbar {
-        position: fixed;
-        z-index: 2;
-    }
+app-navbar {
+    position: fixed;
+    z-index: 2;
+}
 
-    .panel_init {
-        height: 350px;
-        position: relative;
-    }
+.panel_init {
+    height: 350px;
+    position: relative;
+}
 
-    .titulo {
-        position: absolute;
-        width: 100%;
-        margin-top: 25vh;
-    }
+.titulo {
+    position: relative; /* Cambia la posición a relativa */
+    width: 100%;
+    margin-top: 25vh;
+}
 
     .title {
         display: flex;
@@ -24,6 +25,7 @@
         align-items: center;
         z-index: 1;
         color: white;
+        margin-top: 5vh; /* Ajusta el valor para mover todos los componentes hacia arriba */
 
         p {
             font-size: 1.5rem;
@@ -39,22 +41,16 @@
         }
     }
 
-    /* Ajustes para la imagen de fondo */
-    background-image: url('./../../../assets/imgs/bg.jpg'); /* Reemplaza 'ruta/de/la/imagen.jpg' con la ruta de tu imagen de fondo */
-    background-size: cover; /* Ajusta el tamaño de la imagen para cubrir todo el contenedor */
-    background-position: center; /* Centra la imagen */
-    background-repeat: no-repeat; /* Evita la repetición de la imagen */
+/* Ajustes para la imagen de fondo */
+.home {
+    background-image: url('./../../../assets/imgs/bg.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 }
+
 .grid, .grid--rev, .grid--full, .grid-uniform {
     list-style: none;
     margin: 0;
     padding: 0;
-}
-
-.grid, .grid--rev, .grid--full, .grid-uniform {
-}
-.grid:after, .grid--rev:after, .grid--full:after, .grid-uniform:after {
-    content: "";
-    display: table;
-    clear: both;
 }

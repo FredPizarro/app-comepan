@@ -10,6 +10,12 @@ html {
 	font-size: 62.5%;
 	font-family: 'Poppins', sans-serif;
 }
+.fa-store {
+    color: #fcfcfc; /* Cambia el color del icono a rojo */
+}
+.fa-user{
+	color: #fcfcfc;
+}
 
 * {
 	margin: 0;
@@ -35,9 +41,14 @@ html {
 /*               HEADER               */
 /* ********************************** */
 .container-hero {
-	background-color: var(--background-color);
+    /* Agrega el degradado como fondo */
+    background-image: linear-gradient(to right, #26272b, #33353d); /* Cambia los colores según sea necesario */
+    padding: 45px 0 20px; /* Agrega relleno según tus necesidades */
+    font-size: 15px;
+    line-height: 24px;
+    color: #737373;
+    /* Otros estilos que desees aplicar */
 }
-
 .hero {
 	display: flex;
 	justify-content: space-between;
@@ -58,6 +69,8 @@ html {
 .content-customer-support {
 	display: flex;
 	flex-direction: column;
+	color: white;
+    font-size: 24px;
 }
 
 .container-logo {
@@ -100,12 +113,18 @@ html {
 .content-shopping-cart {
 	display: flex;
 	flex-direction: column;
+	color: white;
+    font-size: 24px;
 }
 
 /* ************* NAVBAR ************* */
 .container-navbar {
-	background-color: var(--primary-color);
-    background-color: hsl(0, 37%, 93%)
+    background-color: var(--primary-color);
+    background-color: rgb(240, 180, 166);
+    
+    margin: 0 auto;
+    padding: 40px; /* Agrega un relleno de 10px alrededor del contenedor */
+    /* Otros estilos que desees aplicar */
 }
 
 .navbar {
@@ -158,6 +177,7 @@ html {
 	color: #fff;
 }
 
+
 .search-form {
 	position: relative;
 	display: flex;
@@ -198,6 +218,10 @@ html {
 	font-size: 2rem;
 	color: #fff;
 }
+
+/* ********************************** */
+/*               BANNER               */
+/* ********************************** */
 .logo a {
     color: hsl(190, 71%, 53%); /* Cambia el color a tu preferencia */
     text-decoration: none; /* Elimina el subrayado del enlace */
