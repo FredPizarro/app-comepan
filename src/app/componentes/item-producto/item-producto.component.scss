@@ -1,0 +1,350 @@
+body {
+    background-color: rgb(240, 240, 240);
+    padding: 1em;
+    margin: 0;
+    font-family: 'Source Sans Pro';
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    grid-auto-rows: minmax(auto, max-content); /* Ajusta la altura máxima de las filas */
+    grid-gap: 1em;
+   
+}
+
+.producto > img {
+    width: 100%; /* Establece un ancho del 100% */
+    height: 200px; /* Establece una altura fija */
+    object-fit: cover; /* Escala la imagen para llenar el contenedor sin distorsionarla */
+}
+.producto{
+    max-width: 280px;
+    display: flex;
+    flex-flow: column;
+    border-radius: 6px;
+    box-shadow: 0 0 0.2em rgba(0,0,0,0.2);
+    background-color: rgb(255, 255, 255);
+    cursor: pointer;
+    transition-property:box-shadow ;
+    transition-duration:0.3s ;
+        
+}
+
+.producto:hover{
+    box-shadow: 0 0 1.5em rgba(0,0,0,0.2) ;
+}
+
+.producto > img{
+
+    width: 100%;
+    object-fit: cover;
+}
+.informacion{
+    border-top: 1px solid rgb(230,230,230);
+    padding: 1em;
+    display: flex;
+    flex-flow: column;
+}
+.informacion * + *{
+    margin-bottom: 0.5em;
+}
+.tipo-envio{
+    background-color: rgb(52,131,250);
+    color:rgb(255,255,255);
+    font-weight: 600;
+    max-width: max-content;
+    padding: 0 0.2em;
+    border-radius: 3px;
+    
+    
+}
+.tipo-descuento{
+    background-color: rgb(52,131,250);
+    color:rgb(255,255,255);
+    font-weight: 600;
+    max-width: max-content;
+    padding: 0.2em 0.5em; /* Agrega más espacio vertical (0.2em) y horizontal (0.5em) */
+    border-radius: 100px;
+    font-size: 0.9em;
+    margin-left: 2px;
+}
+.tipo-descuento-container {
+    display: flex; /* Usa flexbox */
+    align-items: center; /* Centra verticalmente */
+    justify-content: center; /* Centra horizontalmente */
+    font-size: 0.3em;
+}
+.tipo-envio-descuento {
+    display: flex; /* Usa flexbox */
+    align-items: center; /* Centra verticalmente */
+    justify-content: center; /* Centra horizontalmente */
+    font-size: 3em;
+}
+.tipo-envio-container {
+    display: flex; /* Usa flexbox */
+    align-items: center; /* Centra verticalmente */
+    justify-content: center; /* Centra horizontalmente */
+    font-size: 1.2em;
+}
+
+.precio{
+    font-size: 1.5em;
+}
+
+.precio-envio{
+ color: rgb(0,166,80);
+ font-weight: bold;
+}
+
+.descripcion, .ubicacion{
+    font-weight: 300;
+}
+.precio-envio, .descripcion, .ubicacion{
+    font-size: 1.2em;
+}
+.descripcion {
+    font-weight: bold;
+    font-size: 1.5em;
+}
+.calificacion,.ubicacion{
+    transition-duration: 0.3s;
+    transition-property: opacity;
+    opacity: 0;
+}
+.producto:hover .calificacion,.producto:hover .ubicacion{
+    opacity: 1;
+}
+/* Regla específica para hacer visible el elemento .ubicacion */
+.ubicacion.especifica {
+    opacity: 1 !important;
+}
+.calificacion{
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: flex-end;
+    line-height: 1; /* Ajustar según sea necesario */
+    
+}
+
+.calificacion > * {
+    margin:0;
+    font-size: 15px; /* Tamaño de fuente ajustado según sea necesario */
+    margin-left: 15px; /* Ajusta este valor según sea necesario */
+}
+
+
+.tipo-envio, .calificacion{
+    font-size: 1em;   
+}
+
+.calificacion > span:first-child{ 
+    color: rgb(52, 131, 250);
+}
+.calificacion > span:last-child {
+    margin-left: 5px; /* Ajusta el valor del margen izquierdo según sea necesario */
+}
+button.comprar {
+  background-color: #007bff; /* Color de fondo del botón */
+  color: white; /* Color del texto del botón */
+  border: none; /* Quitamos el borde del botón */
+  border-radius: 4px; /* Ajustamos el radio de borde */
+  padding: 10px 20px; /* Ajustamos el relleno del botón */
+  cursor: pointer; /* Cambiamos el cursor al pasar por encima */
+  transition: background-color 0.3s ease; /* Agregamos una transición suave */
+  font-weight: bold;
+  margin-left: 15px;
+  font-size: 15px; 
+}
+
+button.comprar:hover {
+  background-color: #0056b3; /* Color de fondo oscuro al pasar el cursor */
+}
+.block_quantity__chooseBlock {
+    display: flex;
+    align-items: center;
+    margin-left: 24px; 
+}
+
+.block_quantity__number {
+    width: 55px;
+    height: 46px;
+    border: 1px solid #ddd;
+    font-size: 18px;
+    text-align: center;
+}
+
+.block_quantity__button {
+    width: 52px;
+    height: 23px; /* Ajusta la altura de los botones */
+    font-size: 20px;
+    cursor: pointer;
+    border: none;
+    background-color: transparent;
+}
+
+.block_quantity__button.block_quantity__down {
+    margin-top: 5px; /* Ajusta la separación entre los botones */
+}
+
+.block_quantity__button.block_quantity__up::before,
+.block_quantity__button.block_quantity__down::before {
+    content: '\25B4'; /* Unicode character for up arrow */
+    color: #777; /* Color del icono de flecha */
+}
+
+.block_quantity__button.block_quantity__down::before {
+    content: '\25BE'; /* Unicode character for down arrow */
+}
+
+.block_quantity__button:hover {
+    background-color: #f0f0f0; /* Cambia el color de fondo al pasar el cursor */
+}
+.block_quantity__buttonWrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 5px; /* Ajusta la separación entre los botones */
+}
+
+.block_quantity__button {
+    width: 52px;
+    height: 23px; /* Ajusta la altura de los botones */
+    font-size: 20px;
+    cursor: pointer;
+    border: none;
+    background-color: transparent;
+    margin: 2px; /* Ajusta la separación entre los botones */
+}
+
+.block_quantity__button.block_quantity__up::before {
+    content: '\25B4'; /* Unicode character for up arrow */
+    color: #777; /* Color del icono de flecha */
+}
+
+.block_quantity__button.block_quantity__down::before {
+    content: '\25BE'; /* Unicode character for down arrow */
+    color: #777; /* Color del icono de flecha */
+}
+
+.block_quantity__button:hover {
+    background-color: #f0f0f0; /* Cambia el color de fondo al pasar el cursor */
+}
+.ultra-regular {
+    font-family: "Ultra", serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 1em; /* Ajusta el tamaño de la fuente según sea necesario */
+    margin-left: 20px; /* Agrega un margen a la izquierda del elemento */
+}
+.cantidad{
+    font-size: 15px;
+    font-weight: bold;
+    
+}
+span {
+    margin-left: 15px; /* Ajusta este valor según sea necesario */
+}
+
+/*:: BOTON MODAL::*/
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap');
+
+
+/*:::Boton-Modal:::*/
+.boton-modal{
+    padding: 15px;
+    font-weight: bold; /* Aplicar negrita al texto cuando #btn-modal está marcado */
+    
+}
+.boton-modal label{
+    padding: 10px 15px;
+    background-color: #5488a3;
+    color: #fff;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 300ms ease;
+}
+.boton-modal label:hover{
+    background-color: #185E83;
+}
+/*:::Fin Boton-Modal:::*/
+
+/*:::Ventana Modal:::*/
+#btn-modal{
+    display: none;
+  
+}
+.container-modal{
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    top: 0; left: 0;
+    background-color: rgba(144, 148, 150, 0.8);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 100;
+}
+#btn-modal:checked ~ .container-modal{
+    display: flex;
+    
+}
+.content-modal {
+    width: 100%;
+    max-width: 400px;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 4px;
+}
+
+.content-modal h2 {
+    margin: 0 0 15px; /* Ajusta el margen inferior del encabezado */
+}
+
+.content-modal p {
+    margin: 0; /* Elimina cualquier margen */
+    padding: 15px 0;
+    border-top: 1px solid #dbdbdb;
+    border-bottom: 1px solid #dbdbdb;
+}
+
+.content-modal .btn-cerrar {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 15px;
+}
+
+.content-modal .btn-cerrar label {
+    padding: 12px 20px; /* Aumenta el relleno para hacer el botón más grande */
+    font-size: 16px; /* Aumenta el tamaño de la letra */
+    background-color: #5488a3;
+    color: #fff;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 300ms ease;
+}
+
+.content-modal .btn-cerrar label:hover {
+    background-color: #185E83;
+}
+
+.cerrar-modal{
+    width:100%;
+    height: 100vh;
+    position: absolute;
+    top:0; left: 0;
+    z-index: -1;
+}
+@media screen and (max-width:800px) {
+    .content-modal{
+        width: 90%;
+    }
+}
+/*:::Fin Ventana Modal:::*/
+/*::: ul Listado:::*/
+.content-modal ul {
+    padding: 0; /* Eliminar el relleno predeterminado de la lista */
+    list-style-type: none; /* Eliminar los marcadores de lista */
+}
+
+.content-modal li {
+    padding: 8px 0; /* Establece el relleno superior e inferior */
+}
+/*:::Fin de listado:::*/

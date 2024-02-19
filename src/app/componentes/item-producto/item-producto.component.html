@@ -1,3 +1,170 @@
-<p>
-  item del producto
-</p>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Ultra&display=swap" rel="stylesheet">
+<body>
+  
+
+
+<!---->
+<div class="producto">
+  <img src="./../../../assets/imgs/panpequeño.png" alt="Pan pequeño">
+  
+  
+  <div class="informacion">
+   
+    <div class="tipo-envio-container"><span class ="tipo-envio">Envio con normalidad</span></div>
+   <br>
+   <span class = "precio">S/ 20.90</span>
+   <span class ="precio-envio">Envio gratis</span>
+   
+    <span class ="descripcion">Pan pequeño</span>
+    
+  
+   
+
+    <div class ="calificacion">
+      <span>
+        <i class="fa fa-star"></i>
+        <i class="fa fa-star"></i>
+        <i class="fa fa-star"></i>
+        <i class="fa fa-star"></i>
+        <i class="fa fa-star"></i>
+      </span>
+      <span>100</span>
+      <div class="tipo-envio-descuento"><span class ="tipo-descuento">Descuento:20%</span></div>
+    </div>
+
+
+   
+      <span class="ubicacion">Envios a : San Luis , Miraflores , Centro de Lima</span>
+    
+      <div class="row ">
+        <div class="large-6 small-12 column left-align">
+          <div class="block_quantity clearfix">
+              <span class="cantidad">CANTIDAD</span>
+              <div class="block_quantity__chooseBlock">
+                <input class="block_quantity__number" name="quantityNumber" type="number" min="1" value="1" oninput="this.value = Math.min(Math.max(parseInt(this.value), 1), 99)">
+                  <div class="block_quantity__buttonWrapper">
+                      <button class="block_quantity__button block_quantity__up"></button>
+                      <button class="block_quantity__button block_quantity__down"></button>
+                  </div>
+                  <div >
+                    <h6 class="ultra-regular">Método de Pago</h6>
+                    <a _ngcontent-meh-c47="" id="logoyape" routerlink="/" class="navbar-brand ng-tns-c47-0"
+                      href="https://www.yape.com.pe/" style="display: inline-block; margin-left: 50px;">
+                      <img _ngcontent-meh-c47="" alt="logo" class="ng-tns-c47-0" src="assets/icon/logo.png" srcset=""
+                        style="width: auto; height: 50px;">
+                    </a>
+                  </div>
+              </div>
+          </div>
+      </div>
+          <div >
+            
+            <button class="button comprar" >
+                Add to Cart
+            </button>
+        </div>
+        
+
+    </div>
+  </div>
+</div>
+<!----->
+<!---->
+<div class="producto">
+  <img src="./../../../assets/imgs/panejemplo.png" alt="Pan pequeño">
+  
+  
+  <div class="informacion">
+   
+    <div class="tipo-envio-container"><span class ="tipo-envio">Envio con normalidad</span></div>
+   <br>
+   <span class = "precio">S/ 20.90</span>
+   <span class ="precio-envio">Envio gratis</span>
+   
+    <span class ="descripcion">Pan pequeño</span>
+    
+  
+   
+
+    <div class ="calificacion">
+      <span>
+        <i class="fa fa-star"></i>
+        <i class="fa fa-star"></i>
+        <i class="fa fa-star"></i>
+        <i class="fa fa-star"></i>
+        <i class="fa fa-star"></i>
+      </span>
+      <span>100</span>
+      <div class="tipo-envio-descuento"><span class ="tipo-descuento">Descuento: 20%</span></div>
+    </div>
+
+    <span class="ubicacion especifica">Envios a : </span> 
+      <div>
+        
+        <!--BOTON-->
+         
+<div class="boton-modal">
+  <label for="btn-modal">
+    Distritos Disponibles
+  </label>
+</div>
+<!--Fin de Boton-->
+<!--VentanaModal-->
+  <input type="checkbox" id="btn-modal">
+<div class="container-modal">
+  <div class="content-modal">
+    <h2>Bienvenido</h2>
+    <p> LLEGADA EN MENOS DE 30 HORA</p>
+    <ul>
+      <li><strong>San Luis:</strong> Permitido</li>
+      <li><strong>Miraflores:</strong> Permitido</li>
+      <li><strong>Centro de Lima:</strong> Permitido</li>
+      <li><strong>Otros distritos:</strong> No permitido</li>
+    </ul>
+      <div class="btn-cerrar">
+        <label for="btn-modal">Cerrar </label>
+      </div>
+
+  </div>
+</div>
+<!--Fin de ventana modal-->
+      </div>
+     
+
+    
+      <div class="row ">
+        <div class="large-6 small-12 column left-align">
+          <div class="block_quantity clearfix">
+              <span class="cantidad">CANTIDAD</span>
+              <div class="block_quantity__chooseBlock">
+                <input class="block_quantity__number" name="quantityNumber" type="number" min="1" max="99" [(ngModel)]="cantidad" (input)="onInputChange($event)" (keydown)="onKeyDown($event)">
+
+                <div class="block_quantity__buttonWrapper">
+                    <button class="block_quantity__button block_quantity__up" (click)="incrementarCantidad()"></button>
+                    <button class="block_quantity__button block_quantity__down" (click)="decrementarCantidad()"></button>
+                </div>
+                <div>
+                    <h6 class="ultra-regular">Método de Pago</h6>
+                    <a _ngcontent-meh-c47="" id="logoyape" routerlink="/" class="navbar-brand ng-tns-c47-0" href="https://www.yape.com.pe/" style="display: inline-block; margin-left: 50px;">
+                        <img _ngcontent-meh-c47="" alt="logo" class="ng-tns-c47-0" src="assets/icon/logo.png" srcset="" style="width: auto; height: 50px;">
+                    </a>
+                </div>
+            </div>
+          </div>
+      </div>
+          <div >
+            
+            <button class="button comprar" >
+                Add to Cart
+            </button>
+        </div>
+        
+        
+    </div>
+  </div>
+</div>
+
+<!----->
+</body>
