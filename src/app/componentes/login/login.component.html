@@ -1,3 +1,19 @@
-<p>
-  login works!
-</p>
+<div class="login-container">
+  <h2> LOGIN </h2>
+  <form action="/login" method="post">
+    <div class="input-group">
+      <input type="email" id="email" name="email" placeholder="Correo electrónico" required>
+    </div>
+    <div class="input-group">
+      <input type="password" id="password" name="password" placeholder="Contraseña" required>
+    </div>
+    <div class="input-group checkbox">
+      <input type="checkbox" id="remember-me" name="remember-me">
+      <label for="remember-me">Recordar contraseña</label>
+    </div>
+    <button type="submit" class="login-button">Ingresar</button>
+  </form>
+  <div class="register">
+    <p>¿Aún no tienes cuenta? <a href="/register">Regístrate</a></p>
+  </div>
+</div>
