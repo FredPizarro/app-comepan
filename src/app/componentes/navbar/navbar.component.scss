@@ -3,6 +3,7 @@ body, html {
   margin: 0;
   padding: 0;
   scroll-padding-top: 60px;
+  font-family: Arial, sans-serif;
 }
 
 /* Estilos de la Navbar */
@@ -13,91 +14,55 @@ body, html {
   position: fixed;
   top: 0;
   width: 100%;
-  background-color: transparent;
+  background: #26272b; /* Color de fondo más oscuro para mayor contraste */
   z-index: 1000;
-  padding: 10px 0;
+  padding: 10px 20px;
+}
 
-  .nav-menu {
-    list-style: none;
-    display: flex;
-    margin: 0;
-    padding: 0;
+.navbar-brand {
+  color: white;
+  font-size: 1.5rem;
+}
 
-    li {
-      a.nav-link {
-        color: white;
-        text-decoration: none;
-        padding: 10px 15px;
-        transition: background-color 0.3s, opacity 0.3s;
-        border-radius: 15px; 
-        margin: 0.5rem;
-        width: 200px;
-        text-align: center;
-        background-color: #CD8034;
-        font-size: 1rem;
+.nav-menu,
+.nav-social {
+  list-style: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
 
+.nav-menu li {
+  margin: 0 10px; /* Ajustar el espaciado */
+}
 
-        &:hover, &:focus {
-          border-radius: 5px;
-          opacity: 0.8;
-          background-color: rgb(126, 64, 39); opacity: 0.9;
-        }
+.nav-link {
+  color: white;
+  text-decoration: none;
+  padding: 5px 10px;
+  transition: color 0.3s;
+}
 
-        
-      }
-    }
-  }
+.nav-link:hover, .nav-link:focus {
+  color: #d8d8d8; /* Cambiar el color al pasar el ratón */
+}
 
-  .nav-toggle {
-    display: none;
-    background-color: #333;
-    border: none;
-    color: white;
-    padding: 10px 15px;
-    cursor: pointer;
+.nav-social li {
+  margin: 0 5px; /* Ajustar el espaciado */
+}
 
-    .hamburger {
-      display: block;
-      width: 25px;
-      height: 3px;
-      background: white;
-      position: relative;
-
-      &::before, &::after {
-        content: '';
-        background: white;
-        width: 25px;
-        height: 3px;
-        display: block;
-        position: absolute;
-        transition: all 0.3s;
-      }
-
-      &::before { top: -8px; }
-      &::after { bottom: -8px; }
-    }
-  }
+.nav-social li a {
+  font-size: 1.2rem; /* Ajustar tamaño de iconos */
+  /* Utilizar fuentes de iconos o SVG para representar los íconos reales */
 }
 
 /* Responsividad */
 @media (max-width: 768px) {
-  .navbar {
-    .nav-menu {
-      display: none;
-      flex-direction: column;
-      width: 100%;
-      position: absolute;
-      top: 55px;
-      left: 0;
-      background-color: #333;
-
-      &.active {
-        display: flex;
-      }
-    }
-
-    .nav-toggle {
-      display: block;
-    }
+  .nav-menu {
+    display: none;
+    /* Otros estilos para el menú responsivo */
+  }
+  .nav-social {
+    /* Estilos para la visibilidad de los íconos en móviles */
   }
 }
