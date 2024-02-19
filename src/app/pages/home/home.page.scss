@@ -39,4 +39,22 @@
         }
     }
 
+    /* Ajustes para la imagen de fondo */
+    background-image: url('./../../../assets/imgs/bg.jpg'); /* Reemplaza 'ruta/de/la/imagen.jpg' con la ruta de tu imagen de fondo */
+    background-size: cover; /* Ajusta el tamaño de la imagen para cubrir todo el contenedor */
+    background-position: center; /* Centra la imagen */
+    background-repeat: no-repeat; /* Evita la repetición de la imagen */
+}
+.grid, .grid--rev, .grid--full, .grid-uniform {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.grid, .grid--rev, .grid--full, .grid-uniform {
+}
+.grid:after, .grid--rev:after, .grid--full:after, .grid-uniform:after {
+    content: "";
+    display: table;
+    clear: both;
 }
