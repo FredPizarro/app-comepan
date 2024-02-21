@@ -1,5 +1,6 @@
 /* Estilos Generales */
-body, html {
+body,
+html {
   margin: 0;
   padding: 0;
   scroll-padding-top: 60px;
@@ -14,7 +15,9 @@ body, html {
   position: fixed;
   top: 0;
   width: 100%;
-  background: #26272b; /* Color de fondo más oscuro para mayor contraste */
+  height: 88px;
+  background: #26272b;
+  /* Color de fondo más oscuro para mayor contraste */
   z-index: 1000;
   padding: 10px 20px;
 }
@@ -32,8 +35,19 @@ body, html {
   padding: 0;
 }
 
-.nav-menu li {
-  margin: 0 10px; /* Ajustar el espaciado */
+.nav-menu li a {
+  margin: 0 1rem 0 1.5rem;
+  border-radius: 15px;
+  width: 100px;
+  text-align: center;
+  transition: 0.3s;
+
+  &:hover {
+    background: #F2B878;
+    color: #212121;
+    font-weight: 700;
+  }
+
 }
 
 .nav-link {
@@ -43,16 +57,49 @@ body, html {
   transition: color 0.3s;
 }
 
-.nav-link:hover, .nav-link:focus {
-  color: #d8d8d8; /* Cambiar el color al pasar el ratón */
+.nav-link:hover,
+.nav-link:focus {
+  color: #d8d8d8;
+  /* Cambiar el color al pasar el ratón */
 }
 
 .nav-social li {
-  margin: 0 5px; /* Ajustar el espaciado */
+  margin: 0 5px;
+  text-decoration: none;
+  list-style: none;
+
+
+  &:first-child {
+    a:hover {
+      color: #006DE2;
+    }
+  }
+
+  &:nth-child(2) {
+
+    a:hover {
+      color: #1C9CEA;
+    }
+  }
+
+  &:nth-child(3) {
+    a:hover {
+      color: #F70000;
+    }
+
+  }
+
+  // invert(48%) sepia(60%) saturate(926%) hue-rotate(152deg) brightness(99%) contrast(103%);
+  /* Ajustar el espaciado */
 }
 
 .nav-social li a {
-  font-size: 1.2rem; /* Ajustar tamaño de iconos */
+  font-size: 1.2rem;
+  text-decoration: none;
+
+
+
+  /* Ajustar tamaño de iconos */
   /* Utilizar fuentes de iconos o SVG para representar los íconos reales */
 }
 
@@ -62,6 +109,7 @@ body, html {
     display: none;
     /* Otros estilos para el menú responsivo */
   }
+
   .nav-social {
     /* Estilos para la visibilidad de los íconos en móviles */
   }

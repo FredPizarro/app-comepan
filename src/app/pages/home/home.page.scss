@@ -13,33 +13,34 @@ app-navbar {
 }
 
 .titulo {
-    position: relative; /* Cambia la posición a relativa */
+    position: relative;
+    /* Cambia la posición a relativa */
     width: 100%;
-    margin-top: 25vh;
+    margin-top: 14vh;
 }
 
-    .title {
-        display: flex;
-        justify-content: center;
-        flex-direction: column;
-        align-items: center;
-        z-index: 1;
-        color: white;
-        margin-top: 5vh; /* Ajusta el valor para mover todos los componentes hacia arriba */
+.title {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    z-index: 1;
+    color: white;
+    /* Ajusta el valor para mover todos los componentes hacia arriba */
 
-        p {
-            font-size: 1.5rem;
-            font-style: italic;
-            margin-top: -15px;
-        }
-
-        .btn_go {
-            background-color: #CD8034;
-            padding: 8px;
-            border-radius: 4px;
-            color: white;
-        }
+    p {
+        font-size: 1.5rem;
+        font-style: italic;
+        margin-top: -64px;
     }
+
+    .btn_go {
+        background-color: #CD8034;
+        padding: 8px;
+        border-radius: 4px;
+        color: white;
+    }
+}
 
 /* Ajustes para la imagen de fondo */
 .home {
@@ -49,7 +50,10 @@ app-navbar {
     background-repeat: no-repeat;
 }
 
-.grid, .grid--rev, .grid--full, .grid-uniform {
+.grid,
+.grid--rev,
+.grid--full,
+.grid-uniform {
     list-style: none;
     margin: 0;
     padding: 0;
