@@ -1,62 +1,55 @@
-<!-- <div class="login-container">
-  <h2> LOGIN </h2>
-  <form action="/login" method="post">
-    <div class="input-group">
-      <input type="email" id="email" name="email" placeholder="Correo electrónico" required>
-    </div>
-    <div class="input-group">
-      <input type="password" id="password" name="password" placeholder="Contraseña" required>
-    </div>
-    <div class="input-group checkbox">
-      <input type="checkbox" id="remember-me" name="remember-me">
-      <label for="remember-me">Recordar contraseña</label>
-    </div>
-    <button type="submit" class="login-button">Ingresar</button>
-  </form>
-  <div class="register">
-    <p>¿Aún no tienes cuenta? <a href="/register">Regístrate</a></p>
-  </div>
-</div> -->
-
-
-<div class="login-container">
-  <div class="container-user">
-    <i class="fas fa-user" style="color: white;"></i>
-    <i class="fa fa-shopping-basket" aria-hidden="true" style="color: white; font-size: 50px; margin-left: 16px;"></i>
-    <div class="login-form-module_new-header-content__nPhWL">
-      <h3 class="login-form-module_new-header-content-title__7anM9">¡Hola!</h3>
-      <h3 class="login-form-module_new-header-content-title__7anM9">Inicia sesión para comprar</h3>
-    </div>
-  </div>
-
-
-
-
-  <div class="alert-container-sodimac-alert-login-fazil">
-    <div>Si no tienes cuenta en Comepan.com, <b>Registrese</b> colocando sus datos personales. Si ya tiene cuenta
-      solo coloque su correo y contraseña del sitio web de <b>Iniciar Sesion </b>.</div>
-  </div>
-  <div class="login-form-module_form-content__aTeg6">
-    <form action="#" autocomplete="off" class="login-form">
-      <div class="form-group">
-        <label for="email" class="form-label">Correo electrónico</label>
-        <input id="email" name="email" type="email" placeholder="Ingresa tu correo electrónico" class="form-control"
-          value="">
-      </div>
-      <div class="form-group">
-        <label for="password" class="form-label">Contraseña</label>
-        <div class="password-input">
-          <input id="password" name="password" type="password" placeholder="Ingresa tu contraseña" class="form-control"
-            value="">
+<div class="login-panel">
+  <div class="login-form-container">
+    <!-- Botón para cerrar sesión -->
+    <button id="cerrarSesionButton" class="cerrar-sesion-button" (click)="cerrar()">
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 17" width="16" height="16">
+        <path
+          d="M1.4082 0.5L8.50064 7.59107L15.5903 0.500048L16.5 1.4097L9.40893 8.49936L16.5 15.5918L15.5902 16.5L8.50064 9.40899L1.40827 16.5L0.5 15.5917L7.59101 8.49936L0.500048 1.40976L1.4082 0.5Z"
+          fill="currentColor"></path>
+      </svg>
+    </button>
+    <div id="testId-cc-login-form"
+      class="login-form-module_falw-login-form-root__BWZ-s login-form-module_falw-login-form-root-rebranded__KQBsg">
+      <div id="unified-login-login-form" class="login-form-module_form-header__BoNTx">
+        <div class="login-form-module_header-logo__vzwI7">
+          <img src="../../../assets/imgs/logo.png" alt="Logo de la página" style="width: 170px; height: auto;">
+        </div>
+        <div class="login-form-module_new-header-content__nPhWL">
+          <h3 class="login-form-module_new-header-content-title__7anM9">¡Hola!</h3>
+          <h3 class="login-form-module_new-header-content-title__7anM9">Inicia sesión para comprar</h3>
         </div>
       </div>
-      <button id="testId-cc-login-form-submit" type="submit"
-        class="button-module_falw-btn__AAtLY button-module_falw-btn-color-primary__JyUjj button-module_falw-btn-block__RMbJC button-module_falw-btn-rebranded__oGf32"
-        disabled="">
-        <span style="letter-spacing: 0px;">Ingresar</span>
-      </button>
-      <div class="login-form-module_separator__oJsGd" data-char="o"></div>
-      <p class="register-text">¿Aún no tienes cuenta? <a href="#">Regístrate</a></p>
-    </form>
+      <div class="alert-container-sodimac-alert-login-fazil">
+        <div>Si no tienes cuenta en Comepan.com, por favor <b>Registrese</b>.</div>
+      </div>
+      <div class="login-form-module_form-content__aTeg6">
+        <form action="#" autocomplete="off" class="login-form">
+          <div class="form-group">
+            <label for="email" class="form-label">Correo electrónico</label>
+            <input id="email" name="email" type="email" placeholder="Ingresa tu correo electrónico" class="form-control"
+              value="">
+          </div>
+          <div class="form-group">
+            <label for="password" class="form-label">Contraseña</label>
+            <div class="password-input">
+              <input id="password" name="password" type="password" placeholder="Ingresa tu contraseña"
+                class="form-control" value="">
+            </div>
+          </div>
+          <button id="testId-cc-login-form-submit" type="submit"
+            class="button-module_falw-btn__AAtLY button-module_falw-btn-color-primary__JyUjj button-module_falw-btn-block__RMbJC button-module_falw-btn-rebranded__oGf32">
+            <span style="letter-spacing: 0px;">Ingresar</span>
+          </button>
+          <div class="login-form-module_separator__oJsGd" data-char="o"></div>
+          <p class="register-text">¿Aún no tienes cuenta? <a (click)="navRegister()">Regístrate</a></p>
+        </form>
+
+      </div>
+
+    </div>
+
+  </div>
+  <div class="login-logo">
+    <img src="../../../assets/imgs/bg.jpg" alt="">
   </div>
 </div>

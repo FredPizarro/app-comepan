@@ -1,14 +1,30 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-register',
   templateUrl: './register.component.html',
-  styleUrls: ['./register.component.scss'],
+  styleUrls: ['./../login/login.component.scss', './register.component.scss'],
 })
-export class RegisterComponent  implements OnInit {
+export class RegisterComponent implements OnInit {
 
-  constructor() { }
+  mostrar_registro: boolean = true;
 
-  ngOnInit() {}
+  constructor(private route: Router) { }
+
+  ngOnInit() { }
+
+  cerrarSesion() {
+
+  }
+
+  cerrar() {
+    this.route.navigateByUrl('/');
+  }
+
+  navRegister() {
+    this.mostrar_registro = !this.mostrar_registro;
+  }
+
 
 }

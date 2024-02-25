@@ -25,5 +25,9 @@ export class NavComponent implements OnInit {
 
   ngOnInit() { }
 
+  onMostrarEvento(mensaje: boolean) {
+    this.mostrarLogin = mensaje;
+  }
+
 
 }

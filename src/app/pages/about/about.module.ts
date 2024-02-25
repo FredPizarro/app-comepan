@@ -7,7 +7,6 @@ import { IonicModule } from '@ionic/angular';
 import { AboutPageRoutingModule } from './about-routing.module';
 
 import { AboutPage } from './about.page';
-import { RegisterComponent } from 'src/app/componentes/register/register.component';
 
 @NgModule({
   imports: [
@@ -16,6 +15,6 @@ import { RegisterComponent } from 'src/app/componentes/register/register.compone
     IonicModule,
     AboutPageRoutingModule
   ],
-  declarations: [AboutPage, RegisterComponent]
+  declarations: [AboutPage,]
 })
 export class AboutPageModule { }

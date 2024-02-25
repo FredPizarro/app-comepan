@@ -21,6 +21,10 @@ const routes: Routes = [
   {
     path: 'contacto',
     loadChildren: () => import('./pages/contacto/contacto.module').then( m => m.ContactoPageModule)
+  },
+  {
+    path: 'acceso',
+    loadChildren: () => import('./pages/acceso/acceso.module').then( m => m.AccesoPageModule)
   }
 ];
 @NgModule({
