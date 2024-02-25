@@ -1,93 +1,94 @@
 body {
-    font-family: 'Open Sans', sans-serif;
-    background: #eaeaea;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-  }
-  
-  .login-container {
-    background: #fff;
-    padding: 40px;
-    border-radius: 8px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    width: 350px;
-    max-width: 90%;
-  }
-  
-  .login-container h2 {
-    text-align: center;
-    color: #333;
-    margin-bottom: 30px;
-    font-weight: 600;
-  }
-  
-  form {
-    display: flex;
-    flex-direction: column;
-  }
-  
-  .input-group {
-    margin-bottom: 20px;
-  }
-  
-  .input-group.checkbox {
-    display: flex;
-    align-items: center;
-  }
-  
-  input[type="email"],
-  input[type="password"] {
-    padding: 15px;
-    border: 1px solid #ddd;
-    border-radius: 4px;
-    font-size: 14px;
-    width: 90%;
-  }
-  
-  input[type="checkbox"] {
-    margin-right: 10px;
-  }
-  
-  .login-button {
-    background: #5c6bc0;
-    color: #fff;
-    padding: 15px;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    font-weight: 600;
-    transition: background 0.3s ease;
-  }
-  
-  .login-button:hover, .login-button:focus {
-    background: #3949ab;
-  }
-  
-  .register {
-    text-align: center;
-    margin-top: 20px;
-  }
-  
-  .register a {
-    color: #5c6bc0;
-    text-decoration: none;
-    transition: color 0.3s ease;
-  }
-  
-  .register a:hover, .register a:focus {
-    color: #3949ab;
-  }
-  
-  ::placeholder {
-    color: #aaa;
-  }
-  
-  :focus {
-    outline: none;
-    border-color: #5c6bc0;
-  }
-  
+  font-family: 'Open Sans', sans-serif;
+  background: #eaeaea;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.login-container {
+  background: #fff;
+  padding: 40px;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  width: 400px;
+  max-width: 90%;
+}
+
+.login-container h2 {
+  text-align: center;
+  color: #333;
+  margin-bottom: 30px;
+  font-weight: 600;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+.input-group {
+  margin-bottom: 20px;
+}
+
+.input-group.checkbox {
+  display: flex;
+  align-items: center;
+}
+
+input[type="email"],
+input[type="password"] {
+  padding: 15px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 14px;
+  width: 90%;
+}
+
+input[type="checkbox"] {
+  margin-right: 10px;
+}
+
+.login-button {
+  background: #5c6bc0;
+  color: #fff;
+  padding: 15px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background 0.3s ease;
+}
+
+.login-button:hover,
+.login-button:focus {
+  background: #3949ab;
+}
+
+.register {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.register a {
+  color: #5c6bc0;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.register a:hover,
+.register a:focus {
+  color: #3949ab;
+}
+
+::placeholder {
+  color: #aaa;
+}
+
+:focus {
+  outline: none;
+  border-color: #5c6bc0;
+}

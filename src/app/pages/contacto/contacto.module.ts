@@ -16,6 +16,6 @@ import { LoginComponent } from 'src/app/componentes/login/login.component';
     IonicModule,
     ContactoPageRoutingModule
   ],
-  declarations: [ContactoPage, LoginComponent]
+  declarations: [ContactoPage]
 })
 export class ContactoPageModule { }
