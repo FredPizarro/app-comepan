@@ -1,4 +1,15 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+@mixin tablet {
+	@media screen and (max-width: 900px) {
+		@content
+	}
+}
+
+@mixin mobile {
+	@media screen and (max-width: 520px) {
+		@content
+	}
+}
+
 
 :root {
 	--primary-color: #c7a17a;
@@ -6,22 +17,16 @@
 	--dark-color: #151515;
 }
 
-html {
-	font-size: 62.5%;
-	font-family: 'Poppins', sans-serif;
-}
+
 .fa-store {
-    color: #fcfcfc; /* Cambia el color del icono a rojo */
+	color: #fcfcfc;
+	/* Cambia el color del icono a rojo */
 }
-.fa-user{
+
+.fa-user {
 	color: #fcfcfc;
 }
 
-* {
-	margin: 0;
-	padding: 0;
-	box-sizing: border-box;
-}
 
 /* ********************************** */
 /*             UTILIDADES             */
@@ -31,24 +36,42 @@ html {
 	margin: 0 auto;
 }
 
-.heading-1 {
-	text-align: center;
-	font-weight: 500;
-	font-size: 3rem;
-}
-
 /* ********************************** */
 /*               HEADER               */
 /* ********************************** */
-.container-hero {
-    /* Agrega el degradado como fondo */
-    background-image: linear-gradient(to right, #26272b, #33353d); /* Cambia los colores según sea necesario */
-    padding: 45px 0 20px; /* Agrega relleno según tus necesidades */
-    font-size: 15px;
-    line-height: 24px;
-    color: #737373;
-    /* Otros estilos que desees aplicar */
+
+.nav {
+	margin-top: 2rem;
+	width: 100%;
+
+
+	.container-hero {
+		/* Agrega el degradado como fondo */
+		background-image: linear-gradient(to right, #26272b, #33353d);
+		/* Cambia los colores según sea necesario */
+		/* Agrega relleno según tus necesidades */
+		font-size: 15px;
+		line-height: 20px;
+		color: #737373;
+		width: 100%;
+		display: flex;
+
+		/* Otros estilos que desees aplicar */
+		.container {
+			padding: 72px 25px 16px 25px;
+			width: 100%;
+
+			@include tablet() {}
+
+			@include mobile() {
+				flex-direction: column;
+			}
+		}
+
+	}
 }
+
+
 .hero {
 	display: flex;
 	justify-content: space-between;
@@ -70,7 +93,7 @@ html {
 	display: flex;
 	flex-direction: column;
 	color: white;
-    font-size: 24px;
+	font-size: 24px;
 }
 
 .container-logo {
@@ -86,7 +109,7 @@ html {
 .container-logo h1 a {
 	text-decoration: none;
 	color: #ffffff;
-	font-size: 3rem;
+	font-size: 2rem;
 	text-transform: uppercase;
 	letter-spacing: -1px;
 }
@@ -114,79 +137,117 @@ html {
 	display: flex;
 	flex-direction: column;
 	color: white;
-    font-size: 24px;
+	font-size: 16px;
+	position: relative;
+
+	.number {
+		background: red;
+		border-radius: 50%;
+		width: 25px;
+		height: 25px;
+		text-align: center;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		font-size: 1rem;
+		font-weight: 500;
+		position: absolute;
+		top: 0;
+		margin-left: -30px;
+		margin-top: 5px;
+	}
 }
 
 /* ************* NAVBAR ************* */
 .container-navbar {
-    background-color: var(--primary-color);
-    background-color: rgb(240, 180, 166);
-    
-    margin: 0 auto;
-    padding: 40px; /* Agrega un relleno de 10px alrededor del contenedor */
-    /* Otros estilos que desees aplicar */
-}
+	background-color: var(--primary-color);
+	background-color: rgb(240, 180, 166);
+	width: 100%;
+	height: 72px;
 
-.navbar {
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
-	padding: 1rem 0;
+	.navbar {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		padding: 7.2px 10px;
+
+
+		.menu {
+			display: flex;
+
+			li {
+				list-style: none;
+
+				a {
+					font-size: 1.3rem;
+					color: var(--dark-color);
+					font-weight: 600;
+					text-transform: uppercase;
+					position: relative;
+					text-decoration: none;
+
+					&::after {
+						content: '';
+						width: 1.5rem;
+						height: 1px;
+						background-color: #fff;
+						position: absolute;
+						bottom: -3px;
+						left: 50%;
+						transform: translate(-50%, 50%);
+						opacity: 0;
+						transition: all 0.3s ease;
+					}
+
+					&:hover::after {
+						opacity: 1;
+						border-bottom: 4px solid #fff;
+
+					}
+
+					&:hover {
+						color: #fff;
+					}
+				}
+
+			}
+
+		}
+
+	}
+
 }
 
 .navbar .fa-bars {
 	display: none;
 }
 
-.menu {
-	display: flex;
-	gap: 2rem;
-}
 
-.menu li {
-	list-style: none;
-}
-
-.menu a {
-	text-decoration: none;
-	font-size: 1.3rem;
-	color: var(--dark-color);
-	font-weight: 600;
-	text-transform: uppercase;
-	position: relative;
-}
-
-.menu a::after {
-	content: '';
-	width: 1.5rem;
-	height: 1px;
-	background-color: #fff;
-	position: absolute;
-	bottom: -3px;
-	left: 50%;
-	transform: translate(-50%, 50%);
-	opacity: 0;
-	transition: all 0.3s ease;
-}
-
-.menu a:hover::after {
-	opacity: 1;
-}
-
-.menu a:hover {
-	color: #fff;
-}
 
 
 .search-form {
 	position: relative;
 	display: flex;
 	align-items: center;
-	border: 2px solid #fff;
-	border-radius: 2rem;
+	border: 2px solid #F0B4A6;
+	border-bottom-color: #fff;
 	background-color: #fff;
-	height: 4.4rem;
+	height: 3.2rem;
 	overflow: hidden;
+
+	&:active,
+	&:hover {
+		border: 2px solid #fff;
+		border-radius: 2rem;
+		transition: 0.35s;
+
+		input {
+			background: #fff;
+		}
+	}
 }
 
 .search-form input {
@@ -198,6 +259,7 @@ html {
 	padding: 0 2rem;
 	color: #777;
 	cursor: pointer;
+	background: #F0B4A6;
 }
 
 .search-form input::-webkit-search-cancel-button {
@@ -215,7 +277,8 @@ html {
 }
 
 .btn-search i {
-	font-size: 2rem;
+	font-size: 1.6rem;
+	margin-top: 32px;
 	color: #fff;
 }
 
@@ -223,14 +286,19 @@ html {
 /*               BANNER               */
 /* ********************************** */
 .logo a {
-    color: hsl(190, 71%, 53%); /* Cambia el color a tu preferencia */
-    text-decoration: none; /* Elimina el subrayado del enlace */
-    font-size: 24px; /* Cambia el tamaño de la fuente a tu preferencia */
-    font-weight: bold; /* Cambia el peso de la fuente a tu preferencia */
-    /* Otros estilos que desees aplicar */
+	color: hsl(190, 71%, 53%);
+	/* Cambia el color a tu preferencia */
+	text-decoration: none;
+	/* Elimina el subrayado del enlace */
+	font-size: 24px;
+	/* Cambia el tamaño de la fuente a tu preferencia */
+	font-weight: bold;
+	/* Cambia el peso de la fuente a tu preferencia */
+	/* Otros estilos que desees aplicar */
 }
 
 .logo a:hover {
+<<<<<<< HEAD
     color: #7ccac6; /* Cambia el color al pasar el mouse */
     /* Otros estilos de hover que desees aplicar */
 }
@@ -588,3 +656,9 @@ button:disabled {
     color: rgb(156 163 175/var(--tw-text-opacity));
     align-self: flex-start; /* Alinea el botón al comienzo del contenedor */
 }
+=======
+	color: #7ccac6;
+	/* Cambia el color al pasar el mouse */
+	/* Otros estilos de hover que desees aplicar */
+}
+>>>>>>> d36d348e6f1c9c890838067e661db42757a301e0
