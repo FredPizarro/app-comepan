@@ -8,20 +8,17 @@
           <span class="number">123-456-7890</span>
         </div>
       </div>
+       <!----USER LOGIN-->
+<!-- Icono de usuario -->
+<div class="container-user" (click)="toggleLoginPanel()">
+  <i class="fas fa-user" style="color: white;"></i>
+  <i class="fa fa-shopping-basket" aria-hidden="true" style="color: white; font-size: 50px; margin-left: 16px;"></i>
+  <div class="content-shopping-cart">
+    <span class="text">Carrito</span>
+    <span class="number">(0)</span>
+  </div>
+</div>
 
-<<<<<<< HEAD
-      <!-- Icono de usuario -->
-      <div class="container-user" (click)="toggleLoginPanel()">
-        <a href="" (click)="toggleLoginPanel()"> <i class="fas fa-user" style="color: white;"></i> </a>
-
-        <app-login></app-login>
-
-        <i class="fa fa-shopping-basket" aria-hidden="true"
-          style="color: white; font-size: 50px; margin-left: 16px;"></i>
-        <div class="content-shopping-cart">
-          <span class="number">(0)</span>
-        </div>
-=======
 <!-- Panel de inicio de sesión -->
 <div *ngIf="mostrarLogin" class="login-panel">
   <div class="login-form-container">
@@ -62,26 +59,17 @@
           <div class="login-form-module_separator__oJsGd" data-char="o"></div>
           <p class="register-text">¿Aún no tienes cuenta? <a href="#">Regístrate</a></p>
         </form>
->>>>>>> c31023acc613b5839bcdcb050292467e24c642b5
       </div>
-
-      <div class="container-logo">
-        <h1 class="logo"><a href="/"> SHOP BREAD</a></h1>
-        <i class="fas fa-store"></i>
-      </div>
-
-
     </div>
- 
+  </div>
+</div>
+<!----USER LOGIN-->
+<!----USER LOGIN-->
+      
 
 
-<<<<<<< HEAD
-
-=======
     
-  
->>>>>>> c31023acc613b5839bcdcb050292467e24c642b5
-
+ 
   <div class="container-navbar">
     <nav class="navbar container">
       <i class="fa-solid fa-bars"></i>
@@ -102,5 +90,4 @@
       </form>
     </nav>
   </div>
-
 </section>
