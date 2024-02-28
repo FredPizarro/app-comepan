@@ -20,7 +20,39 @@ export class NavComponent implements OnInit {
     // Redirigir a la página de inicio
     this.mostrarLogin = false; // Ocultar el panel de inicio de sesión después de cerrar sesión
   }
+   
+   //Car//
+    // Variable para controlar la visibilidad del panel del carrito
+    
+    showCartPanel: boolean = false;
+  
+   
+  
+    openCartPanel() {
+      this.showCartPanel = true;
+      console.log('Panel del carrito abierto');
+    }
+    
+    closeCartPanel() {
+      this.showCartPanel = false;
+      console.log('Panel del carrito cerrado');
+    }
+   //sdds//
+   cantidad: number = 0; // Inicializamos la cantidad a 2
 
+   decrementarCantidad() {
+     if (this.cantidad > 0) {
+       this.cantidad--;
+     }
+   }
+ 
+   incrementarCantidad() {
+     this.cantidad++;
+   }
+   seguirComprando() {
+    
+    this.closeCartPanel();
+   }
   constructor() { }
 
   ngOnInit() { }
