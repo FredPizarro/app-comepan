@@ -29,30 +29,53 @@ export class NavComponent implements OnInit {
    
   
     openCartPanel() {
-      this.showCartPanel = true;
+      this.showCartPanel = !this.showCartPanel;
       console.log('Panel del carrito abierto');
     }
     
-    closeCartPanel() {
-      this.showCartPanel = false;
-      console.log('Panel del carrito cerrado');
-    }
+    
    //sdds//
    cantidad: number = 0; // Inicializamos la cantidad a 2
 
    decrementarCantidad() {
-     if (this.cantidad > 0) {
-       this.cantidad--;
-     }
-   }
- 
-   incrementarCantidad() {
-     this.cantidad++;
-   }
-   seguirComprando() {
+    if (this.cantidad > 1) {
+      this.cantidad--;
+    }
+  }
+  
+  incrementarCantidad() {
+    if (this.cantidad < 99) {
+      this.cantidad++;
+    }
+  }
+   validarCantidad() {
+    // Convertir cantidad a cadena de texto
+    let cantidadString = this.cantidad.toString();
+  
+    // Aplicar expresión regular para permitir solo números
+    cantidadString = cantidadString.replace(/[^0-9]/g, '');
+  
+    // Limitar la longitud a dos dígitos
+    cantidadString = cantidadString.slice(0, 2);
+  
+    // Convertir a número si es válido
+    const validatedValue = parseInt(cantidadString, 10);
+  
+    // Asignar el valor validado
+    this.cantidad = isNaN(validatedValue) ? 1 : validatedValue;
     
-    this.closeCartPanel();
-   }
+  }
+  validarEntrada(event: KeyboardEvent) {
+    // Permitir solo números y teclas de control (por ejemplo, borrar)
+    if (!((event.keyCode >= 48 && event.keyCode <= 57) || (event.keyCode >= 96 && event.keyCode <= 105) || [8, 9, 37, 39].includes(event.keyCode))) {
+      event.preventDefault();
+    }
+  
+    // Limitar la longitud a dos dígitos
+    if ((event.target as HTMLInputElement).value.length >= 2 && ![8, 37, 39].includes(event.keyCode)) {
+      event.preventDefault();
+    }
+  }
   constructor() { }
 
   ngOnInit() { }

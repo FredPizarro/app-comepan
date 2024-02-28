@@ -561,12 +561,18 @@ opacity: 0;
     background: transparent;
     z-index: 20;
 }
+.container-user{
+	position: relative;
+}
 .cart-panel {
-	position: fixed;
-	top: 50%; /* Centrar verticalmente */
-	left: 50%; /* Centrar horizontalmente */
+	color:#151515;
+	position: absolute;
+	top: 0; /* Centrar verticalmente */
+	right:0; /* Centrar horizontalmente */
+	margin-top: 230px;
+	margin-right: -300px;
 	transform: translate(-50%, -50%); /* Centrar completamente */
-	z-index: 1000;
+	z-index: 3;
 	background-color: rgba(255, 255, 255, 0.9); /* Fondo semi-transparente */
 	width: 500px; /* Ancho del panel */
 	max-height: 80vh; /* Altura máxima del panel */
@@ -725,7 +731,7 @@ opacity: 0;
   }
   
   .stepper button {
-	background-color: transparent;
+	
 	border: 1px solid #ccc;
 	border-radius: 5px;
 	cursor: pointer;

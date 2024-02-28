@@ -22,71 +22,69 @@
       <div class="content-shopping-cart" (click)="openCartPanel()">
         <i class="fa fa-shopping-basket" aria-hidden="true" style="color: white; font-size: 50px; margin-left: 16px;"></i>
         <span class="number">0</span>
+          
+         
+      </div>
+       
+      <!---PANEL DE CARRITO-->
+      <div class="cart-panel" *ngIf="showCartPanel">
+        <div class="header">
+          <!-- Icono o mensaje de éxito -->
+          <i class="csicon-icon-success-circle"></i>
+          <span class="label">Lo que llevas en tu Carro</span>
+          <!-- Botón para cerrar el panel -->
+          <button><i class="csicon-danger"></i></button>
+          
+        </div>
+        
+        <div class="body">
+          <!-- Contenido del carrito -->
+          <div class="cart-items">
+            <div class="cart-item">
+              <img src="https://s7d2.scene7.com/is/image/TottusPE/42925762_1" width="50" height="50" alt="Producto">
+              <div class="additional-information">
+                <div class="item-info">
+                  <!-- Título del producto -->
+                  <span class="title">LA SUPER SF BLX850G 14U</span>
+                  <!-- Precio del producto -->
+                  <span class="price">S/ 14.90</span>
+                </div>
+                
+                <!-- Selector de cantidad -->
+                <div class="stepper">
+                  <!-- Botón de decremento -->
+                  <button type="button" class="decrement" (click)="decrementarCantidad()">−</button>
+                  <!-- Campo de cantidad -->
+                  <input type="number" [(ngModel)]="cantidad" (input)="validarCantidad()" (keypress)="validarEntrada($event)">
+                  <!-- Botón de incremento -->
+                  <button type="button" class="increment" (click)="incrementarCantidad()">+</button>
+              </div>
+                <!-- Máximo de unidades permitidas -->
+                <p class="max-units-text">Máximo 24 unidades.</p>
+              </div>
+            </div>
+            
+          </div>
+        </div>
+        <div class="footer">
+          <!-- Advertencia sobre productos agotándose -->
+          <div class="warning">
+            <i class="csicon-alert"></i>
+            <span>Los productos de tu carro de compras pueden agotarse próximamente. Cómpralos pronto.</span>
+          </div>
+          <!-- Botones de acción -->
+          <div class="sub-footer">
+            <button type="button" class="button-secondary-link" (click)="openCartPanel()">Seguir comprando</button>
+            <div class="addToCart-btn">
+              <!-- Enlace para ir al carrito -->
+              <a href="https://www.falabella.com.pe/falabella-pe/basket" target="_blank" class="button-mkp-secondary">Ir al Carro</a>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
     
-      <!---PANEL DE CARRITO-->
-    <div class="cart-panel" *ngIf="showCartPanel">
-      <div class="header">
-        <!-- Icono o mensaje de éxito -->
-        <i class="csicon-icon-success-circle"></i>
-        <span class="label">Lo que llevas en tu Carro</span>
-        <!-- Botón para cerrar el panel -->
-        <button><i class="csicon-danger"></i></button>
-        <button class="close-cart-button" (click)="closeCartPanel()">
-          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 17" width="16" height="16">
-            <path
-              d="M1.4082 0.5L8.50064 7.59107L15.5903 0.500048L16.5 1.4097L9.40893 8.49936L16.5 15.5918L15.5902 16.5L8.50064 9.40899L1.40827 16.5L0.5 15.5917L7.59101 8.49936L0.500048 1.40976L1.4082 0.5Z"
-              fill="currentColor"></path>
-          </svg>
-        </button>
-      </div>
-      
-      <div class="body">
-        <!-- Contenido del carrito -->
-        <div class="cart-items">
-          <div class="cart-item">
-            <img src="https://s7d2.scene7.com/is/image/TottusPE/42925762_1" width="50" height="50" alt="Producto">
-            <div class="additional-information">
-              <div class="item-info">
-                <!-- Título del producto -->
-                <span class="title">LA SUPER SF BLX850G 14U</span>
-                <!-- Precio del producto -->
-                <span class="price">S/ 14.90</span>
-              </div>
-              
-              <!-- Selector de cantidad -->
-              <div class="stepper">
-                <!-- Botón de decremento -->
-                <button type="button" class="decrement" (click)="decrementarCantidad()">−</button>
-                <!-- Campo de cantidad -->
-                <input type="text" [(ngModel)]="cantidad" maxlength="2">
-                <!-- Botón de incremento -->
-                <button type="button" class="increment" (click)="incrementarCantidad()">+</button>
-            </div>
-              <!-- Máximo de unidades permitidas -->
-              <p class="max-units-text">Máximo 24 unidades.</p>
-            </div>
-          </div>
-          
-        </div>
-      </div>
-      <div class="footer">
-        <!-- Advertencia sobre productos agotándose -->
-        <div class="warning">
-          <i class="csicon-alert"></i>
-          <span>Los productos de tu carro de compras pueden agotarse próximamente. Cómpralos pronto.</span>
-        </div>
-        <!-- Botones de acción -->
-        <div class="sub-footer">
-          <button type="button" class="button-secondary-link" (click)="seguirComprando()">Seguir comprando</button>
-          <div class="addToCart-btn">
-            <!-- Enlace para ir al carrito -->
-            <a href="https://www.falabella.com.pe/falabella-pe/basket" target="_blank" class="button-mkp-secondary">Ir al Carro</a>
-          </div>
-        </div>
-      </div>
-    </div>
+    
      <!---PANEL DE CARRITO-->
   </div>
 
