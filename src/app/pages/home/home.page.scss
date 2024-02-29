@@ -1,14 +1,10 @@
-.home {
-    overflow-y: auto;
-}
-
 app-navbar {
     position: fixed;
     z-index: 2;
 }
 
 .panel_init {
-    height: 350px;
+    height: 550px;
     position: relative;
 }
 
@@ -27,6 +23,8 @@ app-navbar {
     z-index: 1;
     color: white;
     /* Ajusta el valor para mover todos los componentes hacia arriba */
+    height: 300px;
+
 
     p {
         font-size: 1.5rem;
@@ -48,6 +46,8 @@ app-navbar {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+    margin-top: 14rem;
+    overflow-y: auto;
 }
 
 .grid,

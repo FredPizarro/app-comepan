@@ -1,0 +1,124 @@
+<div class="listado capa">
+
+  <section class="listado-productos">
+    <div class="fitros-opcion">
+      <div>
+        <p> Resultados (77) </p>
+      </div>
+      <div class="categoria">
+        <p> <b> Categoría </b> </p>
+        <ul>
+          <li><a> Pan </a></li>
+          <li><a> Pastel </a></li>
+          <li><a> Paneton </a></li>
+          <li><a> Torta </a></li>
+          <li><a> Galletas </a></li>
+        </ul>
+      </div>
+      <div class="precio">
+        <p> <b> Categoría </b> </p>
+        <ul>
+          <li class="stars">
+            <input type="checkbox" name="star_5" id="">
+            <div class="align">
+              <img src="./../../../assets/icon/ic_star.svg" alt="" width="22px">
+              <img src="./../../../assets/icon/ic_star.svg" alt="" width="22px">
+              <img src="./../../../assets/icon/ic_star.svg" alt="" width="22px">
+              <img src="./../../../assets/icon/ic_star.svg" alt="" width="22px">
+              <img src="./../../../assets/icon/ic_star.svg" alt="" width="22px">
+            </div>
+          </li>
+          <li class="stars">
+            <input type="checkbox" name="star_5" id="">
+            <div class="align">
+              <img src="./../../../assets/icon/ic_star.svg" alt="" width="22px">
+              <img src="./../../../assets/icon/ic_star.svg" alt="" width="22px">
+              <img src="./../../../assets/icon/ic_star.svg" alt="" width="22px">
+              <img src="./../../../assets/icon/ic_star.svg" alt="" width="22px">
+              <img src="./../../../assets/icon/ic_star-outline.svg" alt="" width="22px">
+            </div>
+          </li>
+          <li class="stars">
+            <input type="checkbox" name="star_5" id="">
+            <div class="align">
+              <img src="./../../../assets/icon/ic_star.svg" alt="" width="22px">
+              <img src="./../../../assets/icon/ic_star.svg" alt="" width="22px">
+              <img src="./../../../assets/icon/ic_star.svg" alt="" width="22px">
+              <img src="./../../../assets/icon/ic_star-outline.svg" alt="" width="22px">
+              <img src="./../../../assets/icon/ic_star-outline.svg" alt="" width="22px">
+            </div>
+          </li>
+          <li class="stars">
+            <input type="checkbox" name="star_5" id="">
+            <div class="align">
+              <img src="./../../../assets/icon/ic_star.svg" alt="" width="22px">
+              <img src="./../../../assets/icon/ic_star.svg" alt="" width="22px">
+              <img src="./../../../assets/icon/ic_star-outline.svg" alt="" width="22px">
+              <img src="./../../../assets/icon/ic_star-outline.svg" alt="" width="22px">
+              <img src="./../../../assets/icon/ic_star-outline.svg" alt="" width="22px">
+            </div>
+          </li>
+          <li class="stars">
+            <input type="checkbox" name="star_5" id="">
+            <div class="align">
+              <img src="./../../../assets/icon/ic_star.svg" alt="" width="22px">
+              <img src="./../../../assets/icon/ic_star-outline.svg" alt="" width="22px">
+              <img src="./../../../assets/icon/ic_star-outline.svg" alt="" width="22px">
+              <img src="./../../../assets/icon/ic_star-outline.svg" alt="" width="22px">
+              <img src="./../../../assets/icon/ic_star-outline.svg" alt="" width="22px">
+            </div>
+          </li>
+          <li class="stars">
+            <input type="checkbox" name="star_5" id="">
+            <div class="align">
+              <img src="./../../../assets/icon/ic_star-outline.svg" alt="" width="22px">
+              <img src="./../../../assets/icon/ic_star-outline.svg" alt="" width="22px">
+              <img src="./../../../assets/icon/ic_star-outline.svg" alt="" width="22px">
+              <img src="./../../../assets/icon/ic_star-outline.svg" alt="" width="22px">
+              <img src="./../../../assets/icon/ic_star-outline.svg" alt="" width="22px">
+            </div>
+          </li>
+        </ul>
+      </div>
+      <div class="descuentos">
+        <p> <b> Descuentos </b> </p>
+        <ul>
+          <li> <input type="checkbox" name="" id=""> <label for=""> 20% dcto </label> </li>
+          <li> <input type="checkbox" name="" id=""> <label for=""> 10% dcto </label> </li>
+          <li> <input type="checkbox" name="" id=""> <label for=""> 5% dcto </label> </li>
+          <li> <input type="checkbox" name="" id=""> <label for=""> sin dscto</label> </li>
+        </ul>
+      </div>
+
+    </div>
+    <div class="componentes">
+      <div class="toolbar-opcion">
+        <label for=""> Ordenar por </label>
+        <select name="" id="">
+          <option value=""> Recomendados </option>
+          <option value=""> Precio de menor a mayor </option>
+          <option value=""> Precio de mayor a menor </option>
+          <option value=""> Nuevos productos </option>
+          <option value=""> Lo mejores evaluados </option>
+          <option value=""> Recomendados </option>
+          <option value=""> Envio con normalidad </option>
+        </select>
+      </div>
+      <br>
+      <div class="listado">
+
+        <app-item-producto (click)="onProduct()"></app-item-producto>
+        <app-item-producto></app-item-producto>
+        <app-item-producto></app-item-producto>
+        <app-item-producto></app-item-producto>
+        <app-item-producto></app-item-producto>
+        <app-item-producto></app-item-producto>
+        <app-item-producto></app-item-producto>
+        <app-item-producto></app-item-producto>
+
+      </div>
+    </div>
+  </section>
+
+  <app-footer></app-footer>
+</div>

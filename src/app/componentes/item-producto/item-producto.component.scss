@@ -1,22 +1,10 @@
-body {
-    background-color: rgb(240, 240, 240);
-    padding: 1em;
-    margin: 0;
-    font-family: 'Source Sans Pro';
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    grid-auto-rows: minmax(auto, max-content); /* Ajusta la altura máxima de las filas */
-    grid-gap: 1em;
-   
+
+.flex{
+    display: flex;
 }
 
-.producto > img {
-    width: 100%; /* Establece un ancho del 100% */
-    height: 200px; /* Establece una altura fija */
-    object-fit: cover; /* Escala la imagen para llenar el contenedor sin distorsionarla */
-}
 .producto{
-    max-width: 280px;
+    max-width: 350px;
     display: flex;
     flex-flow: column;
     border-radius: 6px;
@@ -25,29 +13,37 @@ body {
     cursor: pointer;
     transition-property:box-shadow ;
     transition-duration:0.3s ;
-        
+     
+    &> img {
+        width: 100%; /* Establece un ancho del 100% */
+        height: 200px; /* Establece una altura fija */
+        object-fit: cover; /* Escala la imagen para llenar el contenedor sin distorsionarla */
+    }
+    
+    &:hover{
+        box-shadow: 0 0 1.5em rgba(0,0,0,0.2) ;
+
+        button.comprar {
+            background-color: #E5A341; /* Color de fondo oscuro al pasar el cursor */
+            opacity: 1;
+        }
+    }
+
+    .informacion{
+        border-top: 1px solid rgb(230,230,230);
+        padding: 1em;
+        display: flex;
+        flex-flow: column;
+    }
+    .informacion * + *{
+        margin-bottom: 0.4em;
+    }
+    
 }
 
-.producto:hover{
-    box-shadow: 0 0 1.5em rgba(0,0,0,0.2) ;
-}
 
-.producto > img{
-
-    width: 100%;
-    object-fit: cover;
-}
-.informacion{
-    border-top: 1px solid rgb(230,230,230);
-    padding: 1em;
-    display: flex;
-    flex-flow: column;
-}
-.informacion * + *{
-    margin-bottom: 0.5em;
-}
 .tipo-envio{
-    background-color: rgb(52,131,250);
+    background-color: #BBBBBB;
     color:rgb(255,255,255);
     font-weight: 600;
     max-width: max-content;
@@ -57,7 +53,7 @@ body {
     
 }
 .tipo-descuento{
-    background-color: rgb(52,131,250);
+    background-color: #BBBBBB;
     color:rgb(255,255,255);
     font-weight: 600;
     max-width: max-content;
@@ -104,14 +100,7 @@ body {
     font-weight: bold;
     font-size: 1.5em;
 }
-.calificacion,.ubicacion{
-    transition-duration: 0.3s;
-    transition-property: opacity;
-    opacity: 0;
-}
-.producto:hover .calificacion,.producto:hover .ubicacion{
-    opacity: 1;
-}
+
 /* Regla específica para hacer visible el elemento .ubicacion */
 .ubicacion.especifica {
     opacity: 1 !important;
@@ -136,13 +125,13 @@ body {
 }
 
 .calificacion > span:first-child{ 
-    color: rgb(52, 131, 250);
+    color: #BBBBBB;
 }
 .calificacion > span:last-child {
     margin-left: 5px; /* Ajusta el valor del margen izquierdo según sea necesario */
 }
 button.comprar {
-  background-color: #007bff; /* Color de fondo del botón */
+  background-color: #E5A341; /* Color de fondo del botón */
   color: white; /* Color del texto del botón */
   border: none; /* Quitamos el borde del botón */
   border-radius: 4px; /* Ajustamos el radio de borde */
@@ -152,15 +141,14 @@ button.comprar {
   font-weight: bold;
   margin-left: 15px;
   font-size: 15px; 
+  width: 90%;
+  opacity: 0;
 }
 
-button.comprar:hover {
-  background-color: #0056b3; /* Color de fondo oscuro al pasar el cursor */
-}
+
 .block_quantity__chooseBlock {
     display: flex;
     align-items: center;
-    margin-left: 24px; 
 }
 
 .block_quantity__number {
@@ -246,23 +234,25 @@ span {
 /*:: BOTON MODAL::*/
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap');
 
-
+.btn_icons{
+    position: relative;
+}
 /*:::Boton-Modal:::*/
 .boton-modal{
     padding: 15px;
     font-weight: bold; /* Aplicar negrita al texto cuando #btn-modal está marcado */
-    
+    position: absolute;
+    top: 0;
 }
 .boton-modal label{
-    padding: 10px 15px;
-    background-color: #5488a3;
-    color: #fff;
+    color: #454545;
     border-radius: 4px;
     cursor: pointer;
     transition: all 300ms ease;
 }
 .boton-modal label:hover{
-    background-color: #185E83;
+    filter: invert(76%) sepia(21%) saturate(2970%) hue-rotate(333deg) brightness(90%) contrast(91%);
+
 }
 /*:::Fin Boton-Modal:::*/
 

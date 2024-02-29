@@ -1,0 +1,99 @@
+.capa {
+    height: 100%;
+    overflow-y: auto;
+    margin-top: 17rem;
+}
+
+.flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.listado-productos {
+    background-color: #E9EAF0;
+
+    display: grid;
+    grid-template-columns: 25% 74%;
+    gap: 1%;
+
+    font-size: 1.2rem;
+
+    .categoria {
+        ul>li>a {
+            cursor: pointer;
+
+            &:hover {
+                color: #43e217;
+            }
+        }
+    }
+
+    .precio {
+        ul {
+            padding: 0;
+
+            .stars {
+                padding: 0 !important;
+                display: flex;
+                justify-content: flex-start;
+                align-items: center;
+                margin-left: 1.6rem;
+
+                input[type='checkbox'] {
+                    accent-color: red;
+                }
+
+                .align {
+                    margin-top: 1.2rem;
+
+                    img {
+                        filter: invert(66%) sepia(70%) saturate(773%) hue-rotate(0deg) brightness(105%) contrast(103%);
+
+                    }
+                }
+            }
+        }
+    }
+
+    .fitros-opcion {
+        background: white;
+        padding: 2rem;
+
+    }
+
+    input {
+        margin-right: 0.64rem;
+
+    }
+
+
+}
+
+.componentes {
+    background: white;
+    padding: 1rem;
+
+    .toolbar-opcion {
+        width: 100%;
+
+        select {
+            width: 400px;
+            padding: 0.4rem;
+
+            option {
+                padding: 1rem;
+            }
+        }
+    }
+
+    .listado {
+        display: flex;
+        flex-wrap: wrap;
+
+        app-item-producto {
+            margin: 0.4rem;
+        }
+    }
+
+}
