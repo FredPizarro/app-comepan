@@ -196,6 +196,7 @@ select, input[type="submit"] {
     width: 0px;
   }
   //TextAREA
+  //Card
   .card {
     width: 260px;
     border: 1px solid #ccc;
@@ -285,3 +286,272 @@ select, input[type="submit"] {
 .message {
     font-size: 12px; /* Tamaño de fuente para el mensaje */
 }
+//Card
+/* Estilos para el contenedor de la tabla */
+
+.table-container {
+    width: 100%;
+    max-width: 800px; /* ajusta el ancho máximo según tus necesidades */
+    max-height: 300px; /* Ajusta la altura máxima según sea necesario */
+    overflow-y: auto; /* Habilita el desplazamiento vertical cuando la tabla excede la altura máxima */
+  }
+  
+  /* Estilos para la tabla */
+  .table-container {
+    width: 100%;
+    max-height: 300px; /* Ajusta la altura máxima según sea necesario */
+    overflow-y: auto; /* Habilita el desplazamiento vertical cuando la tabla excede la altura máxima */
+    margin-bottom: 20px; /* Agrega un espacio entre la tabla y los botones */
+  }
+  
+  .table-container th, .table-container td {
+    border: 1px solid #ddd; /* borde de las celdas */
+    padding: 8px;
+    text-align: center; /* centra el texto dentro de las celdas */
+  }
+  
+  .table-container th {
+    background-color: #f2f2f2; /* color de fondo para las celdas de encabezado */
+  }
+  
+  // Estilos para la paginación //
+  .pagination {
+    margin-top: -20px; /* espacio superior entre la tabla y la paginación */
+  }
+  
+  .pagination button {
+    background-color: #f2f2f2; /* color de fondo de los botones */
+    border: none;
+    color: black;
+    padding: 8px 16px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-right: 5px; /* espacio entre los botones */
+  }
+  
+  .pagination button:hover {
+    background-color: #ddd; /* color de fondo cuando el botón se coloca sobre él */
+  }
+  
+  /* Estilos para el botón "Ver Todo" */
+  .pagination button {
+    background-color: #007bff; /* color de fondo del botón */
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top: 10px; /* espacio superior entre la paginación y el botón "Ver Todo" */
+  }
+  
+  .pagination button:hover {
+    background-color: #0056b3; /* color de fondo cuando el botón se coloca sobre él */
+  }
+  .pagination button.active {
+    background-color: rgb(123, 202, 245);
+    color: hwb(0 0% 100%);
+  }
+  .container-base {
+    max-width: 800px; /* ajusta el ancho máximo según tus necesidades */
+    margin: 0 auto; /* centra el contenedor horizontalmente */
+  }
+  //ESTILOS TABLA//
+
+  // Estilos adicionales para el leaderboard //
+.leaderboard {
+    max-width: 490px;
+    width: 100%;
+    border-radius: 12px;
+  
+    header {
+      --start: 15%;
+  
+      height: 130px;
+      background-image: repeating-radial-gradient(circle at var(--start), transparent 0%, transparent 10%, rgba(54, 89, 219, .33) 10%, rgba(54, 89, 219, .33) 17%), linear-gradient(to right, #5b7cfa, #3659db);
+      color: #fff;
+      position: relative;
+      border-radius: 12px 12px 0 0;
+      overflow: hidden;
+  
+      .leaderboard__title {
+        position: absolute;
+        z-index: 2;
+        top: 50%;
+        right: calc(var(--start) * .75);
+        transform: translateY(-50%);
+        text-transform: uppercase;
+        margin: 0;
+  
+        span {
+          display: block;
+        }
+  
+        &--top {
+          font-size: 24px;
+          font-weight: 700;
+          letter-spacing: 6.5px;
+        }
+  
+        &--bottom {
+          font-size: 13px;
+          font-weight: 500;
+          letter-spacing: 3.55px;
+          opacity: .65;
+          transform: translateY(-2px);
+        }
+      }
+  
+      .leaderboard__icon {
+        fill: #fff;
+        opacity: .35;
+        width: 50px;
+        position: absolute;
+        top: 50%;
+        left: var(--start);
+        transform: translate(-50%, -50%);
+      }
+    }
+  
+    &__profiles {
+      background-color: #fff;
+      border-radius: 0 0 12px 12px;
+      padding: 15px 15px 20px;
+      display: grid;
+      row-gap: 8px;
+    }
+  
+    &__profile {
+      display: grid;
+      grid-template-columns: 1fr 3fr 1fr;
+      align-items: center;
+      padding: 10px 30px 10px 10px;
+      overflow: hidden;
+      border-radius: 10px;
+      box-shadow: 0 5px 7px -1px rgba(51, 51, 51, 0.23);
+      cursor: pointer;
+      transition: transform .25s cubic-bezier(.7,.98,.86,.98), box-shadow .25s cubic-bezier(.7,.98,.86,.98);
+      background-color: #fff;
+  
+      &:hover {
+        transform: scale(1.1);
+        box-shadow: 0 9px 47px 11px rgba(51, 51, 51, 0.18);
+      }
+    }
+  
+    &__picture {
+      max-width: 100%;
+      width: 60px;
+      border-radius: 50%;
+      box-shadow: 0 0 0 10px #ebeef3, 0 0 0 22px #f3f4f6;
+    }
+  
+    &__name {
+      color: #979cb0;
+      font-weight: 600;
+      font-size: 20px;
+      letter-spacing: 0.64px;
+      margin-left: 12px;
+    }
+  
+    &__value {
+      color: #35d8ac;
+      font-weight: 700;
+      font-size: 34px;
+      text-align: right;
+  
+      & > span {
+        opacity: .8;
+        font-weight: 600;
+        font-size: 13px;
+        margin-left: 3px;
+      }
+    }
+  }
+  
+ 
+  /* Estilos mínimos para el leaderboard */
+  .leaderboard {
+    box-shadow: 0 0 40px -10px rgba(0, 0, 0, .4);
+  }
+   // Estilos adicionales para el leaderboard //
+
+  // Estilos BOX //
+   .box {
+    width: 300px;
+    border-bottom: 20px solid #03a9f4;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+  }
+  .box h2 {
+    color: #fff;
+    background: #03a9f4;
+    padding: 10px 20px;
+    font-size: 20px;
+    font-weight: 700;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+  }
+  .box ul {
+    position: relative;
+    background: #fff;
+  }
+  .box ul li:hover {
+    transform: scale(1.1);
+    z-index: 5;
+    background: #25bcff;
+    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.2);
+    color: #fff;
+    opacity: 2;
+    font-size: 20px; /* Tamaño de fuente aumentado en el hover */
+}
+  .box ul li {
+    list-style: none;
+    padding: 10px;
+    width: 100%;
+    background: #fff;
+    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.1);
+    transition: transform 0.5s;
+    display: flex;
+    align-items: center;
+    font-size: 18px;
+    position: relative;
+}
+
+.box ul li:hover {
+  transform: scale(1.1);
+  z-index: 5;
+  background: #25bcff;
+  box-shadow: 0 5px 25px rgba(0, 0, 0, 0.2);
+  color: #fff;
+  opacity: 1;
+}
+  .box ul li span {
+    width: 40px; /* Tamaño del contenedor de la imagen */
+    height: 40px; /* Tamaño del contenedor de la imagen */
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    margin-right: 10px;
+    overflow: hidden;
+    
+}
+  .box ul li:hover span {
+    background: #fff;
+    color: #25bcff;
+  }
+  .box ul li span img {
+    max-width: 100%; /* Asegura que la imagen no exceda el tamaño del contenedor */
+    max-height: 100%; /* Asegura que la imagen no exceda el tamaño del contenedor */
+    border-radius: 50%; /* Mantiene la apariencia circular */
+}
+
+  // Estilos BOX //

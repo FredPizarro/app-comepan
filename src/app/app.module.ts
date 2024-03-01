@@ -11,6 +11,8 @@ import { NavComponent } from './componentes/nav/nav.component';
 import { LoginComponent } from './componentes/login/login.component';
 import { FormsModule } from '@angular/forms';
 
+
+
 @NgModule({
   declarations: [AppComponent, NavbarComponent, NavComponent, LoginComponent],
   imports: [
@@ -18,6 +20,7 @@ import { FormsModule } from '@angular/forms';
     IonicModule.forRoot(),
     AppRoutingModule,
     FormsModule
+   
   ],
   providers: [{ provide: RouteReuseStrategy, useClass: IonicRouteStrategy }],
   bootstrap: [AppComponent],

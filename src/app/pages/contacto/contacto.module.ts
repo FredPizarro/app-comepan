@@ -9,12 +9,14 @@ import { ContactoPageRoutingModule } from './contacto-routing.module';
 import { ContactoPage } from './contacto.page';
 import { LoginComponent } from 'src/app/componentes/login/login.component';
 
+
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
     ContactoPageRoutingModule
+    
   ],
   declarations: [ContactoPage]
 })
