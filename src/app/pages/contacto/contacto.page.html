@@ -1,0 +1,136 @@
+    <div class="contacto">
+    <div class="contenedor-input">
+        <div class="input-bx">
+            <input type="text" required (blur)="onBlur($event)" />
+            <span>Producto</span>
+            <span class="mensaje-error" *ngIf="showError">Falta rellenar este campo</span>
+        </div>
+        <div class="input-bx">
+            <input type="text" required (blur)="onBlur($event)" />
+            <span>Lugar</span>
+            <span class="mensaje-error" *ngIf="showError">Falta rellenar este campo</span>
+        </div>
+
+        <!--SELECT IONIC-->
+        <ion-list class="custom-list">
+            <ion-item>
+                <ion-select class="custom-select" label="Default label" placeholder="Favorite Fruit">
+                    <ion-select-option value="apple">Apple</ion-select-option>
+                    <ion-select-option value="banana">Banana</ion-select-option>
+                    <ion-select-option value="orange">Orange</ion-select-option>
+                </ion-select>
+            </ion-item>
+        </ion-list>
+        <!--SELECT IONIC-->
+        <!----------------->
+        <!--SELECT-->
+        <div class="select-menu" [class.active]="menuOpen">
+            <div class="select-btn" (click)="toggleMenu()">
+              <span class="sBtn-text">{{ selectedOption ? selectedOption : 'Selecciona tu pan favorito' }}</span>
+              <i class="fas fa-chevron-down"></i>
+            </div>
+            <ul class="options">
+              <li class="option" *ngFor="let option of options" (click)="selectOption(option)">
+                <i [ngClass]="option.iconClass" [style.color]="option.color"></i>
+                <span class="option-text">{{ option.text }}</span>
+              </li>
+            </ul>
+          </div>
+        <!--SELECT-->
+
+            <!--TextAREA-->
+                <div class="wrapper">
+                    <h2>Textarea</h2>
+                    <textarea spellcheck="false" placeholder="Escribe algo aquí..." required></textarea>
+                </div>
+                <script>
+                    const textarea = document.querySelector("textarea");
+                    textarea.addEventListener("keyup", e =>{
+                    textarea.style.height = "63px";
+                    let scHeight = e.target.scrollHeight;
+                    textarea.style.height = `${scHeight}px`;
+                    });
+                </script>
+            <!--TextAREA-->
+
+          <!--CARDS-->
+          <div class="card">
+            <div class="card-body">
+                <div>
+                    <h5 class="total-order">TOTAL ORDER</h5>
+                    <h2 class="price">S/30.00</h2>
+                    <div class="message-button-container">
+                        <button class="arrow-button"><i class="fas fa-arrow-up"></i></button>
+                        <span class="message">Mensaje SSSSSS</span>
+                    </div>
+                </div>
+                <i class="fa fa-shopping-cart"></i>
+            </div>
+        </div>
+          <!--CARDS-->
+
+          <div class="header_fixed">
+            <table>
+                <thead>
+                    <tr>
+                        <th>S No.</th>
+                        <th>Image</th>
+                        <th>Username</th>
+                        <th>Email</th>
+                        <th>Department</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        
+                        <td><button>View</button></td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        
+                        <td><button>View</button></td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        
+                        <td><button>View</button></td>
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                       
+                        <td><button>View</button></td>
+                    </tr>
+                    <tr>
+                        <td>5</td>
+                        
+                        <td><button>View</button></td>
+                    </tr>
+                    <tr>
+                        <td>6</td>
+                        
+                        <td><button>View</button></td>
+                    </tr>
+                    <tr>
+                        <td>7</td>
+                        
+                        <td>Engineering</td>
+                        <td><button>View</button></td>
+                    </tr>
+                    <tr>
+                        <td>8</td>
+                        
+                        <td>Priya</td>
+                        
+                        <td>Engineering</td>
+                        <td><button>View</button></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    
+</div>
+    
+    

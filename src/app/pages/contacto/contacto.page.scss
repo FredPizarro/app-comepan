@@ -1,0 +1,287 @@
+.contacto{
+    overflow-y: auto;
+}
+
+.contenedor-input {
+    margin-top: 20rem;
+    margin-left: 20px;
+    
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    
+}
+
+.input-bx {
+    position: relative;
+    width: 400px; /* Modificado el ancho del contenedor */
+}
+
+.input-bx input {
+    width: calc(100% - 40px); /* Ajusta el ancho del input en píxeles */
+    padding: 10px;
+    border: 2px solid #7f8fa6;
+    border-radius: 5px;
+    outline: none;
+    font-size: 1rem;
+    transition: 0.6s;
+}
+
+.input-bx span {
+    position: absolute;
+    left: 0;
+    padding: 10px;
+    font-size: 1rem;
+    color: #7f8fa6;
+    text-transform: uppercase;
+    pointer-events: none;
+    transition: 0.6s;
+}
+
+.input-bx .mensaje-error {
+    position: absolute;
+    left: 0;
+    padding: 10px;
+    font-size: 0.8rem;
+    color: red !important; /* Añade !important para aumentar la especificidad */
+    display: none;
+}
+
+.input-bx input:focus:invalid ~ .mensaje-error {
+    display: block;
+}
+
+.input-bx input:valid ~ span,
+.input-bx input:focus ~ span {
+    color: #3742fa;
+    transform: translateX(10px) translateY(-7px);
+    font-size: 0.65rem;
+    font-weight: 600;
+    padding: 0 10px;
+    background: #fff;
+    letter-spacing: 0.1rem;
+}
+
+.input-bx input:valid,
+.input-bx input:focus {
+    color: #12b438;
+    border: 2px solid #3742fa;
+}
+
+/* Estilos para el ion-select */
+
+
+
+.custom-list {
+    max-width: 300px; /* Define el ancho máximo del ion-list */
+    
+}
+
+label {
+  display: block;
+  margin-bottom: 10px;
+}
+
+select, input[type="submit"] {
+  width: 300px;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+/*SELECT MENUUU*/
+.select-menu {
+    width: 380px;
+    // margin: 140px auto;
+}
+
+.select-menu .select-btn {
+    display: flex;
+    height: 55px;
+    background: #fff;
+    padding: 20px;
+    font-size: 18px;
+    font-weight: 400;
+    border-radius: 8px;
+    align-items: center;
+    cursor: pointer;
+    justify-content: space-between;
+    box-shadow: 0 0 5px rgba(0,0,0,0.1);
+}
+
+.select-menu .select-btn i {
+    font-size: 25px;
+    transition: 0.3s;
+}
+
+.select-menu.active .select-btn i {
+    transform: rotate(-180deg);
+}
+
+.select-menu .options {
+    position: relative;
+    padding: 20px;
+    margin-top: 10px;
+    border-radius: 8px;
+    background: #fff;
+    box-shadow: 0 0 3px rgba(0,0,0,0.1);
+    display: none;
+}
+
+.select-menu.active .options {
+    display: block;
+}
+
+.select-menu .options .option {
+    display: flex;
+    height: 55px;
+    cursor: pointer;
+    padding: 0 16px;
+    border-radius: 8px;
+    align-items: center;
+    background: #fff;
+}
+
+.select-menu .options .option:hover {
+    background: #F2F2F2;
+}
+
+.select-menu .options .option i {
+    font-size: 25px;
+    margin-right: 12px;
+}
+
+.select-menu .options .option .option-text {
+    font-size: 18px;
+    color: #333;
+}
+/*SELECT MENUUU*/
+  //TextAREA
+.wrapper{
+    width: 470px;
+    background: #fff;
+    border-radius: 5px;
+    padding: 25px 25px 30px;
+    box-shadow: 8px 8px 10px rgba(0,0,0,0.06);
+    overflow-y: auto;
+  }
+  .wrapper h2{
+    color: #4671EA;
+    font-size: 28px;
+    text-align: center;
+  }
+  .wrapper textarea {
+    width: 100%;
+    resize: none;
+    height: 220px;
+    overflow-y: auto; /* Agrega esta línea para mostrar la barra de desplazamiento vertical */
+    outline: none;
+    padding: 15px;
+    font-size: 16px;
+    margin-top: 20px;
+    border-radius: 5px;
+    max-height: 330px;
+    caret-color: #4671EA;
+    border: 1px solid #bfbfbf;
+}
+  textarea::placeholder{
+    color: #b3b3b3;
+  }
+  textarea:is(:focus, :valid){
+    padding: 14px;
+    border: 2px solid #4671EA;
+  }
+  textarea::-webkit-scrollbar{
+    width: 0px;
+  }
+  //TextAREA
+  .card {
+    width: 260px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.card-body {
+    display: flex;
+    flex-direction: row; /* Alinea los elementos en una fila */
+    justify-content: space-between; /* Espacio uniforme entre los elementos */
+    align-items: center;
+    padding: 10px;
+    margin-top: 10px; /* Establece un margen superior uniforme para todos los elementos */
+}
+
+.total-order,
+.price,
+.message {
+    text-align: center; /* Alinea el texto al centro */
+    flex: 1; /* Ocupa el espacio disponible */
+    margin: 0 10px; /* Margen derecho e izquierdo para separar los elementos */
+}
+
+.total-order {
+    font-size: 16px; /* Tamaño de fuente para TOTAL */
+}
+
+.price {
+    font-size: 24px; /* Tamaño de fuente más grande para PRICE */
+}
+
+.cart-image {
+    width: 30px;
+    height: 30px;
+    margin-left: 20px; /* Mueve la imagen del carrito a la derecha */
+}
+
+.message-button-container {
+    display: flex;
+    align-items: center;
+    margin-right: 20px; /* Ajusta el margen derecho del contenedor */
+}
+
+.arrow-button {
+    margin-left: 10px; /* Ajusta el margen izquierdo del botón dentro del contenedor */
+}
+.fa-shopping-cart {
+    font-size: 24px; /* Tamaño del icono */
+    border: 2px solid blue; /* Borde de color azul */
+    border-radius: 20%; /* Borde redondeado para que el icono se vea como un círculo */
+    padding: 10px; /* Relleno para el icono */
+    color: blue; /* Color del icono */
+    margin-left: 10px; /* Separación del icono */
+    background-color: hsla(244, 50%, 65%, 0.468); /* Fondo claro para el icono */
+}
+.arrow-button {
+    background-color: #fff; /* Fondo claro para el botón */
+    border: 2px solid blue; /* Borde de color azul */
+    border-radius: 50%; /* Borde redondeado para que el botón se vea como un círculo */
+    padding: 10px; /* Relleno para el botón */
+   
+}
+
+.arrow-button i {
+    font-size: inherit; /* Mantener el tamaño del ícono igual que el tamaño del texto heredado */
+    color: blue; /* Color del ícono */
+}
+
+.arrow-button {
+    background-color: #fff; /* Fondo claro para el botón */
+    border: 2px solid blue; /* Borde de color azul */
+    border-radius: 50%; /* Borde redondeado para que el botón se vea como un círculo */
+    padding: 10px; /* Relleno para el botón */
+    margin-left: 10px; /* Separación del botón */
+    font-size: 13px; /* Tamaño de fuente para el botón */
+}
+
+.arrow-button i {
+    font-size: inherit; /* Mantener el tamaño del ícono igual que el tamaño del texto heredado */
+    color: blue; /* Color del ícono */
+}
+
+.message {
+    font-size: 12px; /* Tamaño de fuente para el mensaje */
+}
