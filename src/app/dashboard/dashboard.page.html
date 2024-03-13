@@ -1,0 +1,43 @@
+<div class="dashboard">
+
+  <div [class.minimized]="sidebarMinimized" class="sidebar">
+    <button class="toggle-sidebar" (click)="toggleSidebar()">
+      <span class="hamburger-icon"></span>
+    </button>
+
+    <h2>ComePan</h2>
+    <ul class="menu">
+      <li class="active"><a href="#">Inicio</a></li>
+      <li><a href="#">Nuestros Panes</a></li>
+      <li><a href="#">Pedidos</a></li>
+      <li><a href="#">Ventas</a></li>
+      <li><a href="#">Inventario</a></li>
+      <li><a href="#">Reportes</a></li>
+      <li><a href="#">Equipo</a></li>
+      <li><a href="#">Mensajes</a></li>
+      <li><a href="#">Favoritos</a></li>
+      <li><a href="#">Configuración</a></li>
+      <li><a href="#">Cerrar Sesión</a></li>
+    </ul>
+  </div>
+
+  <div class="main-content">
+    <div class="navbar">
+      <div class="search-bar">
+        <input type="search" placeholder="Buscar...">
+        <button type="submit"><img src="search-icon.png" alt="Buscar"></button>
+      </div>
+      <div class="user-info">
+        <span class="user-name">Juan Pérez</span>
+        <span class="user-status">Usuario Premium</span>
+      </div>
+    </div>
+
+    <div class="content">
+      <!-- El contenido principal va aquí -->
+      <h1>Bienvenido a ComePan</h1>
+      <p>Este es tu dashboard, donde puedes gestionar todo lo relacionado con la panadería.</p>
+    </div>
+  </div>
+
+</div>

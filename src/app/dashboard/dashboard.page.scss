@@ -1,0 +1,166 @@
+// Definición de variables
+$font-stack: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+$background-color: #f4f4f4;
+$text-color: #333;
+$sidebar-bg-color: #2c3e50;
+$main-bg-color: white;
+$hover-bg-color: #34495e;
+$hover-text-color: #ecf0f1;
+$navbar-bg-color: #ecf0f1;
+$border-color: #bdc3c7;
+$shadow-light: 0 2px 5px rgba(0, 0, 0, 0.2);
+$shadow-medium: 0 4px 6px rgba(0, 0, 0, 0.1);
+$shadow-heavy: 0 6px 8px rgba(0, 0, 0, 0.15);
+$sidebar-width: 20%;
+$sidebar-minimized-width: 5%;
+
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: $font-stack;
+    background-color: $background-color;
+    color: $text-color;
+}
+
+.dashboard {
+    display: flex;
+    height: 100vh;
+
+    .sidebar {
+        width: $sidebar-width;
+        background-color: $sidebar-bg-color;
+        color: white;
+        padding: 20px 0;
+        box-shadow: $shadow-light;
+        transition: width 0.3s ease;
+
+        // Botón "hamburger"
+        .toggle-sidebar {
+            background: none;
+            border: none;
+            cursor: pointer;
+            padding: 10px 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            .hamburger-icon {
+                display: block;
+                width: 30px;
+                height: 2px;
+                background-color: white;
+                position: relative;
+                transition: all 0.3s ease;
+            }
+        }
+
+        h2 {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .menu {
+            list-style-type: none;
+            padding: 0;
+
+            li a {
+                display: block;
+                padding: 13px 20px;
+                color: white;
+                text-decoration: none;
+                transition: background-color 0.3s, color 0.3s;
+
+                &:hover, &.active {
+                    background-color: $hover-bg-color;
+                    color: $hover-text-color;
+                }
+            }
+        }
+    }
+}
+
+.main-content {
+    flex-grow: 1; // Ajuste para que ocupe el espacio restante
+    background-color: $main-bg-color;
+    box-shadow: $shadow-light;
+    padding: 20px; // Añadido para el padding
+
+    .navbar {
+        background-color: $navbar-bg-color;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px;
+        border-bottom: 2px solid $border-color;
+
+        .search-bar {
+            position: relative;
+            display: flex;
+            align-items: center;
+
+            input[type="search"] {
+                padding: 10px 20px;
+                border: 2px solid $border-color;
+                border-radius: 25px;
+                width: 100%;
+                outline: none;
+                box-shadow: $shadow-medium;
+                transition: box-shadow 0.3s ease;
+
+                &:focus {
+                    box-shadow: $shadow-heavy;
+                }
+            }
+
+            button {
+                position: absolute;
+                right: 10px;
+                border: none;
+                background-color: transparent;
+                cursor: pointer;
+                padding: 0;
+
+                img {
+                    width: 24px;
+                    height: 24px;
+                }
+
+                &:hover {
+                    opacity: 0.8;
+                }
+            }
+        }
+
+        .user-info {
+            display: flex;
+            align-items: center;
+
+            .user-name, .user-status {
+                margin: 0 5px;
+                font-weight: bold;
+            }
+
+            .user-status {
+                font-size: 0.8em;
+                color: #7f8c8d;
+            }
+        }
+    }
+}
+
+// Responsive Design
+@media (max-width: 768px) {
+    .dashboard {
+        flex-direction: column;
+
+        .sidebar {
+            width: 100%;
+            height: auto;
+            padding: 10px 0;
+        }
+
+        .main-content {
+            width: 100%;
+        }
+    }
+}

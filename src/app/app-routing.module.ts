@@ -29,7 +29,11 @@ const routes: Routes = [
   {
     path: 'list-producto',
     loadChildren: () => import('./pages/list-producto/list-producto.module').then( m => m.ListProductoPageModule)
+  },  {
+    path: 'dashboard',
+    loadChildren: () => import('./dashboard/dashboard.module').then( m => m.DashboardPageModule)
   }
+
 ];
 @NgModule({
   imports: [
